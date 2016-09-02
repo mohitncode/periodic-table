@@ -1,0 +1,39 @@
+div.element {
+  width: 65px;
+  height: 75px;
+  background-color: #fff;
+  border: solid 2px black;
+  text-align: center;
+  margin: 0px 2.5px;
+  display: inline-block;
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+
+span.atomic-number {
+  padding-top: 10px;
+  display: block;
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+span.symbol {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+span.element-name {
+  display: block;
+  font-size: 0.60em;
+  font-weight: 400;
+}
+
+div.blank {
+  border: solid 2px #fff;
+  color: #fff;
+}
+
+div.element-row {
+  display: block;
+  margin: 5px 0px;
+}
