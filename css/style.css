@@ -1,6 +1,6 @@
-div.element {
-  width: 65px;
-  height: 75px;
+td.element {
+  width: 3.9em;
+  height: 4.8em;
   background-color: #fff;
   border: solid 2px black;
   text-align: center;
@@ -28,12 +28,12 @@ span.element-name {
   font-weight: 400;
 }
 
-div.blank {
+td.blank {
   border: solid 2px #fff;
   color: #fff;
 }
 
-div.element-row {
+tr.element-row {
   display: block;
   margin: 5px 0px;
 }

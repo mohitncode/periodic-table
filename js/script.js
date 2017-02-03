@@ -1857,12 +1857,12 @@ var periodicTable = {
 
 var table = periodicTable.table;
 for (var row in table) {
-  var rowDiv = document.createElement('div');
-  rowDiv.className = 'element-row';
+  var elementRow = document.createElement('tr');
+  elementRow.className = 'element-row';
 
   var elements = table[row].elements;
   for (var i = 0; i < 18; i++) {
-    var elementDiv = document.createElement('div');
+    var elementColumn = document.createElement('td');
     var atomicNumber = document.createElement('span');
     var elementSymbol = document.createElement('span');
     var elementName = document.createElement('span');
@@ -1875,23 +1875,23 @@ for (var row in table) {
     elementSymbol.innerText = 'none';
     atomicNumber.innerText = 'none';
 
-    elementDiv.className = 'blank element';
+    elementColumn.className = 'blank element';
     for (var element in elements) {
       if (i === elements[element].position && elements[element].name !== '' && elements[element].position !== '') {
-        elementDiv.classList.remove('blank');
+        elementColumn.classList.remove('blank');
         elementName.innerText = elements[element].name;
         elementSymbol.innerText = elements[element].small;
         atomicNumber.innerText = elements[element].number;
       } else if (i === elements[element].position) {
-        elementDiv.style.borderStyle = 'dashed';
-        elementDiv.style.borderColor = '#000';
+        elementColumn.style.borderStyle = 'dashed';
+        elementColumn.style.borderColor = '#000';
       }
     }
-    elementDiv.appendChild(atomicNumber);
-    elementDiv.appendChild(elementSymbol);
-    elementDiv.appendChild(elementName);
-    rowDiv.appendChild(elementDiv);
+    elementColumn.appendChild(atomicNumber);
+    elementColumn.appendChild(elementSymbol);
+    elementColumn.appendChild(elementName);
+    elementRow.appendChild(elementColumn);
   }
 
-  document.querySelector('#periodic-table').appendChild(rowDiv);
+  document.querySelector('#periodic-table').appendChild(elementRow);
 }
